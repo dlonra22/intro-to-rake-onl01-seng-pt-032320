@@ -8,3 +8,11 @@ namespace :greeting do
      puts "hola de Rake!"
     end
   end
+
+namespace :db do 
+    desc 'migrates db'
+    task :migrate => :environment
+    do 
+      Student.create_table
+    end
+  end
